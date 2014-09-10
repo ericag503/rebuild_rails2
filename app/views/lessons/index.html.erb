@@ -1,7 +1,11 @@
+<% content_for(:title, "Table of Contents | Rebuild") %>
+
 <h1>Table of Contents</h1>
 
 <ul>
   <% @lessons.each do |lesson| %>
-    <li><%= lesson.name %></li>
+    <li><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
   <% end %>
 </ul>
+
+<a href="/lessons/new"><button type="button">Create a New Lesson</button>
